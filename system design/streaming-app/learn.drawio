@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" modified="2024-06-07T19:52:17.285Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="jlUotu5xWtkQiGYkiVyG" version="24.4.4" type="device">
+  <diagram name="Page-1" id="WOOnXWrNgPVAAFFp-XUV">
+    <mxGraphModel dx="1020" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WfF_TurxCDPoVBJbY8km-10" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="418" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="458" as="sourcePoint" />
+            <mxPoint x="130" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-12" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.cpu;" vertex="1" parent="1">
+          <mxGeometry x="250" y="418" width="70" height="64.8" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-13" value="videoFrame" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="610" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-14" value="Id, device,&lt;div&gt;offset&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="175" y="640" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-16" value="Get video frame request" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="548" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-15" value="Frames" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="458" as="sourcePoint" />
+            <mxPoint x="325" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-19" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="422.8" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-20" value="Sql database" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="425" y="506" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-21" value="perform query" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="418" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-22" value="return response" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="476" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-23" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;" vertex="1" parent="1">
+          <mxGeometry x="80" y="590" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-24" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="610" as="sourcePoint" />
+            <mxPoint x="300" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-25" value="webrtc" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="578" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-26" value="Post comment&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="378" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-27" value="HTTP" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="155" y="422.8" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-28" value="proper&amp;nbsp;&lt;div&gt;payload and contract&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="466" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-29" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="410" as="sourcePoint" />
+            <mxPoint x="350" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-30" value="Video transformer to&amp;nbsp;&lt;div&gt;different resolutions&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-31" value="ffmpeg/gstreamer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="365" y="270" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-32" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="490" y="340" as="sourcePoint" />
+            <mxPoint x="590" y="340" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-33" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Files.svg;" vertex="1" parent="1">
+          <mxGeometry x="600" y="305" width="64" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-34" value="writes into&lt;div&gt;hdfs or s3 fs&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="495" y="290" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WfF_TurxCDPoVBJbY8km-35" value="returns file paths&lt;div&gt;and access urls&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="340" width="110" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

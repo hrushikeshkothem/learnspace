@@ -1,0 +1,11 @@
+version: '3'
+services:
+  grafana:
+    image: grafana/grafana
+    networks:
+      - localprom
+    ports:
+      - 3030:3000
+networks:
+  localprom:
+    driver: bridge

@@ -1,0 +1,55 @@
+# Queues Vs PubSub
+
+Queue: 
+    A queue is a pull based system.
+    The consumer will pull the message from the queue.
+    and the message will be deleted from the queue.
+    only one consumer can pull the message from the queue.
+    the message will be processed by the consumer.
+    the message will not be available for other consumers.
+    the message will be deleted from the queue after processing.
+    the message will be processed in a sequence.
+
+    example :
+
+    User -> API Gateway -> SQS ( Simple Queue Service ) -> Lambda -> DynamoDB
+
+    all api requests will be stored in the queue.
+    and the lambda will process the request from the queue. and will store the data in the dynamodb.
+    once the request is processed the message will be deleted from the queue.
+
+    in amazon we have SQS ( Simple Queue Service ) to store the messages in the queue.
+    this maintain FIFO ( First In First Out ) order to process the messages.
+
+PubSub:
+    A publish subscribe system. 
+    it is a push based system.
+    the producer will push the message to the topic.
+    and the message will be available for all the consumers.
+    who are subscribed to the topic.
+    the message will not be deleted from the topic.
+    the message will be available for all the consumers.
+    the message will be processed by all the consumers.
+    the message will be processed in parallel.
+
+    example :
+
+    User -> API Gateway -> SNS ( Simple Notification Service ) -> [ Lambda1, Lambda2, Lambda3 ] -> DynamoDB
+
+    all api requests will be pushed to the topic.
+    and the lambda1, lambda2, lambda3 will process the request from the topic. and will store the data in the dynamodb.
+    the message will be available for all the lambdas.
+    the message will not be deleted from the topic.
+
+    in amazon we have SNS ( Simple Notification Service ) to push the messages to the topic.
+    this maintain PUBSUB ( Publish Subscribe ) order to process the messages.
+
+Difference:
+
+1. Queue is a pull based system, PubSub is a push based system.
+2. Queue maintains FIFO order, PubSub maintains PUBSUB order.
+3. Queue is a single consumer, PubSub is multiple consumers.
+4. Queue is a sequence processing, PubSub is a parallel processing.
+5. Queue is a delete message, PubSub is a keep message.
+6. Queue is a message will be processed by only one consumer, PubSub is a message will be processed by all the consumers.
+7. Queue is a message will not be available for other consumers, PubSub is a message will be available for all the consumers.

@@ -1,0 +1,25 @@
+# High Availability vs Fault Tolerance
+
+A fault tolerant system is a system that can continue to operate even 
+    if one or more of its components fail.
+    without compromising the system's performance.
+    and without losing the data.
+
+the main difference between high available system and fault tolerant system is 
+    high available system is designed to be available and operational for a high percentage of the time.
+    fault tolerant system is designed to be operational even if one or more of its components fail without,
+    compromising the performance.
+
+consider a system
+                          |--------------------|
+client -> load balancer ->| service            |-> database
+                          |--------------------|
+
+backend service is a fault tolerant system.
+    if the database goes down the service can still operate.
+    if the service goes down the client can still operate.
+    without compromising the performance.
+
+generally, fault tolerance systems are more expensive than high availability systems.
+    because fault tolerance systems have to be designed to handle the failure of the components.
+    and also have to be designed to handle the performance of the system.

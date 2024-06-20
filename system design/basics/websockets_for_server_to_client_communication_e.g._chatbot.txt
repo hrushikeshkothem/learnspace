@@ -1,0 +1,23 @@
+# Websockets for Server to Client Communication e.g. Chatbot
+
+## Websockets
+
+Consider a simple serverless 
+
+User -> API Gateway -> Lambda -> DynamoDB
+
+here the user invokes the server , and this is a good fit 
+incase of fetching transaction data, or order request this is a good fit.
+
+but what if the server wants to send a message to the user.
+
+eg : a chatbot, or a notification.
+
+in that case we can use websockets.
+
+## Websockets
+
+websockets are build above the http protocol.
+and it keeps the connection open between the server and the client.
+and when we use websockets the server can send a message to the client.
+and the client can send a message to the server.

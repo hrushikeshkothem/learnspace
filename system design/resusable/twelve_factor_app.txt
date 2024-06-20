@@ -1,0 +1,50 @@
+# Twelve Factor App
+
+1. Heroku developers have identified a methodology for building software-as-a-service apps that are easy to maintain and scale. 
+This methodology is called the Twelve-Factor App. 
+
+The Twelve-Factor App methodology is a set of best practices for 
+building modern, 
+scalable, 
+maintainable software-as-a-service apps.
+
+if you know cloud devops best practices,
+you will see that the Twelve-Factor App methodology is a set of best practices for 
+building modern, scalable, maintainable software-as-a-service apps.
+
+1. Codebase
+   - One codebase tracked in revision control, many deploys
+2. Dependencies
+    - Explicitly declare and isolate dependencies, that means the dependencies should be declared in the package.json or requirements.txt file.
+    - so that we can easily install the dependencies.
+3. Config
+    - Store config in the environment, that means the configuration should be stored in the environment variables.
+    - so that we can easily change the configuration without changing the code.
+4. Backing services
+    - Treat backing services as attached resources, that means the backing services like databases, queues, caches, etc should be treated as attached resources.
+    - so that we can easily change the backing services without changing the code.
+5. Build, release, run
+    - Strictly separate build and run stages, that means the build, release, and run stages should be strictly separated.
+    - so that we can easily build the code, release the code, and run the code.
+6. Processes
+    - Execute the app as one or more stateless processes, that means the app should be executed as one or more stateless processes.
+    - so that we can easily scale the app.
+7. Port binding
+    - Export services via port binding, that means the services should be exported via port binding.
+    - so that the services can be accessed via the port.
+8. Concurrency
+    - Scale out via the process model, that means the app should be scaled out via the process model.
+    - so that we can easily scale the app.
+9. Disposability
+    - Maximize robustness with fast startup and graceful shutdown, that means the app should be disposed of gracefully.
+    - so that we can easily dispose of the app.
+10. Dev/prod parity
+    - Keep development, staging, and production as similar as possible, that means the development, staging, and production should be as similar as possible.
+    - so that we can easily deploy the code to production.
+11. Logs
+    - Treat logs as event streams, that means the logs should be treated as event streams.
+    - so that we can easily monitor the app.
+12. Admin processes
+    - Run admin/management tasks as one-off processes, that means the admin/management tasks should be run as one-off processes.
+    - so that we can easily run the admin/management tasks.
+

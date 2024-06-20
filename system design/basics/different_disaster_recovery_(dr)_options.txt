@@ -1,0 +1,31 @@
+# Different Disaster Recovery (DR) Options
+
+Disaster recovery options 
+
+    1. backup and restore
+    2. pilot light
+    3. warm standby
+    4. active - active
+
+1. Backup and Restore
+    - Data is backed up to a secondary location and can be restored in the event of a disaster.
+    - RPO and RTO depend on the frequency of backups and the time taken to restore the data.
+    - Suitable for small-scale applications with low RPO and RTO requirements.
+
+2. Pilot Light
+    - A minimal version of the application is always running in the cloud.
+    - In the event of a disaster, the full application can be quickly launched.
+    - Suitable for applications with moderate RPO and RTO requirements.
+    - Cost-effective compared to other options.
+
+3. Warm Standby
+    - A scaled-down version of the application is always running in the cloud.
+    - In the event of a disaster, the full application can be scaled up.
+    - Suitable for applications with higher RPO and RTO requirements.
+    - More expensive than the pilot light option.
+
+4. Active - Active
+    - Two identical versions of the application are running simultaneously in different locations.
+    - In the event of a disaster, traffic can be redirected to the secondary location.
+    - Suitable for applications with very low RPO and RTO requirements.
+    - Most expensive option due to the need for duplicate infrastructure.

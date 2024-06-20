@@ -1,0 +1,31 @@
+# Challenges of Hashing
+
+Consider we are using hashing for database sharding.
+
+now a data input is given to a hash function and the hash value is calucated.
+depending on the hash value we choose which database to select to store the data.
+
+example
+
+ data -> hash function -> hash value ( 8 ) 
+ say, we have 4 databases.
+
+ now we can apply the modulo operation to the hash value to get the database number.
+ that means , 8 % 4 = 0
+ so it stores in the 0th database. which is the first database.
+
+similarly, if the hash value is 9 then 9 % 4 = 1
+so it stores in the 2nd database.
+
+and soon.... 
+
+but , what if out 4 databases a database is down.
+then the hash value 7 % 4 = 3 and which choose the 4th database.
+and it is down.
+
+now we need to rewrire the hash function to choose the next database.
+which is total mess and chaos.
+
+this is one of the challenges of hashing.
+
+and for this purpose we can use consistent hashing.

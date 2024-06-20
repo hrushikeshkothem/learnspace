@@ -1,0 +1,24 @@
+# IDS Vs IPS Vs Security Group NACLs
+
+IDS stands for intrution detection system,
+    it is basically a system that monitors the network traffic for suspicious activity
+    and issues alerts when such activity is discovered.
+
+    it don't take any action on the network traffic.
+    it will just monitor the network traffic and issues alerts.
+
+    it is just a passive system.
+    it is a software application that monitors the network traffic.
+    amazon guard duty is an example of IDS.
+
+IPS stands for intrusion prevention system,
+    it is basically a system that monitors the network traffic for suspicious activity
+    and takes action on the network traffic when such activity is discovered.
+
+    it will take action on the network traffic.
+    it will monitor the network traffic and takes action on the network traffic.
+
+    it is an active system.
+    it is a software application that monitors the network traffic and takes action on the network traffic.
+    AWS WAF is an example of IPS.
+

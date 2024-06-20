@@ -1,0 +1,9 @@
+# Security - Encryption at Rest Client Server Side Encryption
+
+This is also called as Encryption at Rest.
+
+basically we will encrypt the data at the client side and then send it to the server.
+and the server will decrypt the data and store it in the database.
+before that the client and server will have a key to encrypt and decrypt the data.
+
+this is generally used to secure the data at rest.

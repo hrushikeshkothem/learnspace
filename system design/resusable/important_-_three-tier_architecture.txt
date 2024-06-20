@@ -1,0 +1,67 @@
+# Important - Three-Tier Architecture
+
+it is called as 3 - tier architecture because it is divided into 3 layers:
+1. Presentation Layer 
+2. Application Layer
+3. Data Layer
+
+example : 
+    Amazon shopping website
+
+    Developed with HTML, CSS, JavaScript, React, other front-end technologies
+    Presentation layer : 
+        - User Interface
+        - Web Browser
+        - Mobile App
+
+    Developed with Node.js, Express, other back-end technologies
+    Application Layer :
+        - Business Logic    
+        - User Authentication
+        - Shopping Cart
+
+    Developed with MySQL, MongoDB, other databases
+    Data Layer :
+        - Database
+        - Data Storage
+        - Data Access
+
+
+API calls are made from the presentation layer to the application layer, 
+and the application layer interacts with the data layer to fetch or store data.
+
+The 3-tier architecture helps in separating concerns, making the application more modular, scalable, and maintainable.
+
+Desgin 3-tier with 
+1. Virtual Machine ( EC2 )
+2. Serverless ( Lambda )
+3. Containers ( ECS, EKS )
+
+
+Implementation with Virtual machine ( EC2 ):
+
+    Client -> Amazon Route 53 (DNS) -> Elastic Load Balancer (ELB) -> Presentation Layer (EC2) -> Application Layer (EC2) -> Data Layer (RDS)
+
+improvizations : 
+
+    1. Single point of failure : 
+        - Use multiple Availability Zones for high availability.
+        - Use Auto Scaling to automatically adjust the number of EC2 instances based on traffic.
+        - Use Amazon RDS Multi-AZ for high availability of the database.
+
+    2. Security : 
+        - Use Security Groups to control inbound and outbound traffic to EC2 instances.
+        - Use IAM roles to manage permissions for EC2 instances.
+        - Use encryption at rest and in transit for data security.
+        - only public subet for presentation layer and private subnet for application and data layer.
+
+    3. Data optimization : 
+        - Use Amazon ElastiCache for caching frequently accessed data.
+        - Use Amazon S3 for storing static assets like images, videos, and files.
+        - Use Amazon CloudFront for content delivery to reduce latency.
+    
+    4. Scalable and High Availability : 
+        - Use Amazon RDS Read Replicas for read scalability.
+        - Use Amazon Aurora for high availability and scalability.
+        - Use Amazon DynamoDB for a fully managed NoSQL database.
+        - Use Amazon ElastiCache for in-memory caching to improve performance.

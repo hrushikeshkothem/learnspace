@@ -1,0 +1,16 @@
+# API and API Gateway - The Must Know for Every Design
+
+Application program interface is a connection between computer programs
+
+Client <-> API <-> Backend service
+
+1. Traffic management
+2. Load Balancing
+3. Specifi input / output validations
+4. Auth N/Z
+
+so we can't directly invoke backend service programs 
+
+[ Client ]
+[ Client ]      -> [ API Gateway ]    -> [ Backend Service ]
+[ Client ]

@@ -1,0 +1,35 @@
+# High Priority Queuing Messaging System
+
+High Priority Queuing Messaging System is a messaging system that allows the user to send messages to other users 
+based on the priority of the message.
+
+Let use assume a service A 
+    that sends the information of insurence of bike, car and home to process to another service B.
+
+but the client wants to process the insurence of car with high priority than the insurence of bike and home.
+
+in this senario high priority Queuing Messaging System is used.
+
+to implement this system,
+
+implemention 1: 
+
+consider a serivce A that does all the pre-processing and other stuff
+and it sends the message to Message Queue (MQ) with the priority of the message.
+and the message is processed by the respective service based on the priority of the message.
+
+since the message Queue has the priority of the message, the message is processed based on the priority of the message.
+
+implemention 2:
+
+Service A has a two simple Queue Service (SQS) with the name high_priority and low_priority.
+
+
+and serivce A sends all the car insurence messages to the high_priority queue 
+and bike and home insurence messages to the low_priority queue.
+
+and that queue is processed by the respective service.
+
+implemention 3: 
+
+Service A has a Event Bridge that sends the message to the respective service based on the priority of the message.

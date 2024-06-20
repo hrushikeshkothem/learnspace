@@ -1,0 +1,11 @@
+version: '3'
+services:
+  testapp:
+    image: prom_test:latest
+    networks:
+      - localprom
+    ports:
+      - 3000:3000
+networks:
+  localprom:
+    driver: bridge

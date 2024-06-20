@@ -1,0 +1,39 @@
+# Streaming vs Messaging
+
+## Streaming
+
+1. In streaming, the data is processed in real-time.
+2. For example take amazon website 
+    for every click on the website the data will be processed in real-time.
+3. The data will be processed in a sequence.
+4. The data will be processed in real-time.
+5. So alot of data will be sent to the server.
+6. Process a single click won't make sense 
+7. So we collect all the click in a session and push it to the amazon kinsis. or some 
+    amazon messaging streaming service. MSK ( Managed Streaming for Apache Kafka ) 
+8. The data will be processed in real-time.
+9. The data won't be deletd from the stream. unless we delete it.
+10. The data will be available for all the consumers.
+11. The data will be processed by all the consumers.
+
+## Messaging
+
+1. In messaging, the data is simple json or xml data.
+2. The data will be processed by pushing into a simple queue service. ( SQS )
+3. The data will be pulled by the backend and will be processed.
+4. The data will be deleted from the queue after processing if it is SQS 
+5. The data won't be deleted if it is some publish subscribe system.
+
+Difference:
+1. Streaming is a real-time processing, Messaging is a simple data processing.
+2. Streaming is a sequence processing, Messaging is a parallel processing.
+3. Streaming is a keep message, Messaging is a delete message.
+4. Streaming is a message will be available for all the consumers, Messaging is a message will be processed by only one consumer.
+etc...
+
+example:
+Amazon Kinesis is a streaming service.
+Kafka is a streaming service.
+SQS is a messaging service.
+SNS is a messaging service.
+

@@ -1,0 +1,46 @@
+# Real World Scaling Interview Tips
+
+Question : let's say tommorow your application is getting more traffic and the server is not able to handle the traffic. How will you scale the application?
+
+Virtual Machines (VM)
+
+    -> Sends the traffic to the Application Load Balancer
+    and than using auto scaling group we can spin up a new VM (4 CPU, 16 GB RAM)
+    and hence we can scale the application horizontally.
+
+    at the same time we can also increase the capacity of the server
+    by increasing the CPU, RAM, Disk etc ...
+    and hence we can scale the application vertically. 
+
+    since the brust traffic is high , pre scaling the application is a good idea.
+    and scheduling the scaling is also a good idea.
+    in addition to that i assure the AMI is light weight and the boot time is less.
+    If my application is connected to a database , i will use exisiting connection pools 
+    and will not create new connection pools for each request. so that the database query is quicker
+    and the response time is less.
+    using RDS proxy is also a good idea to manage the database connections.
+
+    -> Use IEM (Infrastructure Event Management) to monitor the application and the server.
+    -> Use Cloudwatch to monitor the application and the server.
+
+    -> increase Account limits for the number of instances that can be launched in the account.
+
+Serverless 
+
+    -> use api Gateway caching to cache the responses.
+    -> use http api than rest api. for better performance.
+    -> use lambda layers to share code across the lambdas.
+    -> use lambda destinations to send the response to a queue or a topic.
+    -> use lambda insights to monitor the lambda functions.
+    -> use lambda extensions to send logs to a log group.
+    -> increase account limits for the number of lambdas that can be launched in the account.
+    -> use provisioned concurrency to reduce the cold start time.
+    -> utilise RDS proxy to manage the database connections.
+
+Containers
+
+    -> use replica sets to scale the application.
+    -> use HPA (Horizontal Pod Autoscaler) to scale the application.
+    -> Cluster over provisioning is a good idea.
+    -> ingress controller is a good idea.
+    -> utilise RDS proxy to manage the database connections.

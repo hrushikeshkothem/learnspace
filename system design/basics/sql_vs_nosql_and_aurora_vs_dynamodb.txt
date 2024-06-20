@@ -1,0 +1,67 @@
+# SQL vs NoSQL and Aurora vs DynamoDB
+
+SQL :
+
+1. SQL is a relational database.
+2. SQL is a structured query language.
+3. SQL is a table based database.
+4. SQL is a schema based database.
+5. SQL is a vertical scaling database.
+6. SQL is a single server database.
+7. SQL is a high cost database.
+8. SQL is a high availability database.
+9. It follows ACID properties.
+10. SQL is a good fit for complex queries.
+
+NoSQL :
+
+1. NoSQL is a non-relational database.
+2. NoSQL is a unstructured query language.
+3. NoSQL is a document based database.
+4. NoSQL is a schema less database.
+5. NoSQL is a horizontal scaling database.
+6. NoSQL is a multi server database.
+7. NoSQL is a low cost database.
+8. NoSQL is a low availability database.
+9. It follows CAP properties.
+10. NoSQL is a good fit for simple queries.
+
+-> when the data is structured and the data is relational then we can use SQL.
+-> when the data is unstructured and the data is non-relational then we can use NoSQL.
+ or when the data is dynamic and the data is non-relational then we can use NoSQL.
+ or when the data is simple and the data is non-relational then we can use NoSQL.
+
+-------------------------------------------------------------------------------------------------------
+
+Aurora :
+
+1. Aurora is a relational database.
+2. Aurora is a MySQL and PostgreSQL compatible database.
+3. Aurora is a high performance database.
+4. Aurora is a high availability database.
+5. It is provided by AWS.
+6. Aurora is a high cost database.
+7. It is said to be 5 times faster than MySQL and 3 times faster than PostgreSQL.
+8. Aurora is a good fit for complex queries.
+
+DynamoDB :
+
+1. DynamoDB is a non-relational database.
+2. DynamoDB is a key-value and document database.
+3. DynamoDB is a high performance database.
+4. DynamoDB is a high availability database.
+5. It is provided by AWS.
+6. DynamoDB is a low cost database.
+7. It is said to be 10 times faster than traditional databases.
+8. DynamoDB is a good fit for simple queries.
+
+-------------------------------------------------------------------------------------------------------
+
+by the end of the day, the choice of the database depends on the use case.
+
+and since most of the applications are built on microservices architecture, we can use both SQL and NoSQL databases in the application.
+
+example :
+
+1. we can use SQL for user data, transaction data etc ...
+2. we can use NoSQL for session data, cache data etc ...

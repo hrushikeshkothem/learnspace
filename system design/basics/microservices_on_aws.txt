@@ -1,0 +1,66 @@
+# Microservices on AWS
+
+EC2
+
+[ Amazon API Gateway ]
+        |
+        |
+        |                       [ store/get     ]       -> [ Amazon EC2(m5.large)   ]       -| 
+[ ElasticLoadBalancer ]      -> [ store/post    ]       -> [ Amazon EC2(t3.micro)   ]       -|  Common databases / insolated databases
+                                [ store/delete  ]       -> [ Amazon EC2(m4.2xlarge) ]       -|
+
+-------------
+
+Serverless alternative
+
+Lamda Functions
+
+[ Amazon API Gateway ]
+        |
+        |
+        |                       [ store/get     ]       -> [ AWS Lamda Function     ]       -| 
+[ ElasticLoadBalancer ]      -> [ store/post    ]       -> [ AWS Lamda Function     ]       -|  Common databases / insolated databases
+                                [ store/delete  ]       -> [ AWS Lamda Function     ]       -|
+
+-------------
+
+Container alternative
+
+Kubernates 
+
+[ Amazon API Gateway ]
+        |
+        |
+        |                       [ store/get     ]       -> [ Amazon Elastic Kubernates Service     ]       -| 
+[ ElasticLoadBalancer ]      -> [ store/post    ]       -> [ Amazon Elastic Kubernates Service     ]       -|  Common databases / insolated databases
+                                [ store/delete  ]       -> [ Amazon Elastic Kubernates Service     ]       -|
+                        
+-------------
+
+-> Kubernates is super popular right now 
+
+Kubernates 
+
+                                                [ Service A ]       -> [ Pod A ]
+[ Ingress Application Load Balancer ]       ->  [ Service B ]       -> [ Pod B ]
+                                                [ Service C ]       -> [ Pod C ]
+
+-------------
+
+-> Mix and match
+
+[ Amazon API Gateway ]
+        |
+        |
+        |                       [ store/get     ]       -> [ Amazon EC2(m5.large)                  ]       -| 
+[ ElasticLoadBalancer ]      -> [ store/post    ]       -> [ AWS Lamda Function                    ]       -|  Common databases / insolated databases
+                                [ store/delete  ]       -> [ Service C                             ]       -|
+
+------------
+
+-> which one to choose
+
+    depends on the project
+    -> for interview go with the one which you are comfortable with 
+
+    

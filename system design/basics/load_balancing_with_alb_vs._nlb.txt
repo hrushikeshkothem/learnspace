@@ -1,0 +1,55 @@
+# Load Balancing with ALB Vs. NLB
+
+-> every ec2 instance have a public ip address 
+     and we can access our services from that ipaddress
+     what if the ec2 instance got down and the ipaddress changes 
+     what if you need to auto scale it horizantally 
+     in that senoiros we can't relay on a ec2 instance ip address to access the services
+
+in this senario Load Balancer comes to screen
+
+Elastic load Balancer automatically distrubtes traffic to multiple instances
+each elastic load Balancer have a unique name 
+
+                                                        -> [ Amazon EC2 ]
+[ Amazon Route53 ] -> [ Application Load Balancer ]     -> [ Amazon EC2 ]
+                                                        -> [ Amazon EC2 ]
+
+-> it also tracks the instance health , even if one service is down than it won't send traffic to that
+    service
+
+Properties of load Balancer:
+    1. distrubes incomeing traffic
+    2. Monitors health of traffic
+    3. Integerate SSL
+    4. It can scale up and down ( elastic )
+
+
+Types of load Balancer
+    1. Application load Balancer
+    2. Network load Balancer
+
+    1. -> you want to invoke different backend for different routes than 
+        with application load balancer using the path you can distrubtes the traffic
+        becuase of this we can scale each backend independently
+    
+    Properties of application load balancer:
+        1. Operates on OSI layer 7 <-
+        2. Routes traffic based on path
+        3. Validates and terminates SSL
+
+    Properties of Network load balancer
+        1. Operates on OSI layer 4
+        2. Routes based on protocol and port of incomeing traffic
+        3. SSl passthrough by default
+
+Should you use ALB or NLB 
+1. NLB handle spike traffic better
+2. NLB exposes static ip address
+3. NLB don't support lamda
+
+1. ALB needs global acclertor 
+2. ALB support lamda and all
+
+
+    

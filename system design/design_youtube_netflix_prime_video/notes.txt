@@ -1,0 +1,67 @@
+# Design YouTube Netflix Prime Video
+
+Step 1 :  features and desgin considerations
+ 
+1. Video Upload
+2. Search and Browse Videos
+3. Video Streaming
+4. Filter explicit content
+
+Design a scalable, resilent, secure and cost effective system
+
+Step 2: Choose the right storage
+
+Storage options Avaliable 
+1. Hard Disk Drive (HDD)
+2. Solid State Drive (SSD)
+3. Object Storage
+
+for this use case we will use Object Storage
+since it is easily scalable, cost effective and can store large files
+and we only pay for the storage we use
+and S3 is secure, durable and highly available
+hence we use S3 for storing videos
+
+Step 3: Choose the right database
+
+Database options Avaliable
+1. SQL
+2. NoSQL
+
+for this use case we will use NoSQL
+since we need to store large amount of data and we need to scale horizontally
+and we need to store unstructured data
+and we need to store metadata of videos
+
+hence we can use DynamoDB, ElasticSearch or MongoDB
+since we have to search and browse videos we can use ElasticSearch
+because it is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases
+Elasticsearch is a noSQL database and is document oriented
+and it is also capable of full-text search and analytics capabilities
+
+hence we use ElasticSearch for storing metadata of videos
+DynamoDB and MongoDB can also be used for storing metadata of videos
+
+Step 4: Video Converstion to different resolutions
+we have to options
+1. convert when user requested for that resolution of that video
+2. convert all resolutions of video and store in S3 when video is uploaded
+
+but the first option is not scalable and cost effective 
+it won't give plesent user experience
+
+hence we choose the second option
+
+to do this we can use aws Elemental MediaConvert
+it is a file-based video processing service that allows video providers to transcode video-on-demand content for multiscreen delivery
+or 
+we can use video processing tools and libraries like ffmpeg and run them on EC2 instances or Lambda functions or kubernetes pods
+
+Step 5: explicit content filtering
+we can use AWS Rekognition for detecting explicit content in videos
+it is a deep learning-based image and video analysis service that can identify objects, people, text, scenes, and activities, as well as detect any inappropriate content
+or 
+we can use our own deep learning models and run them on EC2 instances or Lambda functions or kubernetes pods
+to detect explicit content in videos
+
+

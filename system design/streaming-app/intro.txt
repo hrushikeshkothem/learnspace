@@ -1,0 +1,174 @@
+Large scale distributed system
+    i. Large scale : very intensive , used alot
+        eg: google maps 
+            it has lot of data and traffic and performance expections
+    ii. Distributed systems : for fault torlarance and performance it has multiple replica
+        of same code instances 
+
+To understand system design well ,
+    we need to learn design patterns well
+
+System design patterns helps for design reliable , scalable and maintainable systems
+this helps to convert business requirements into technical solutions
+
+to understand let's take example of streaming application
+
+-------
+requirement : 
+    some sort of events should be broadcasted to millions of clients  
+
+all thes business requirements can be provided by product managers 
+    while preparing the business requirements they will think about 
+        i. how many clients are there
+        ii. how many events are there
+        iii. how many events are broadcasted to clients
+        iv. how many events are broadcasted to clients in a second
+        v. how many events are broadcasted to clients in a minute
+        vi. how many events are broadcasted to clients in a hour
+        vii. how many events are broadcasted to clients in a day
+        viii. how much data is generated in a day
+        ix. how much server capacity is required to handle this data
+        x. how much storage is required to store this data
+        etc... 
+    while preparing this business requirements they will not think about 
+        i. how many servers are required
+        ii. how many databases are required
+        iii. how many caches are required
+        iv. how many queues are required
+        v. how many load balancers are required
+        vi. how many firewalls are required
+        vii. how many proxies are required
+        viii. how many cdns are required
+        ix. how many monitoring tools are required
+        x. how many logging tools are required
+        etc...
+
+and we need to convert these requirements into technical solutions
+
+step 1 : 
+    priotize the requirements
+step 2 :
+    convert the features to abstract components
+step 3 :
+    convert the abstract components to data definitions
+step 4 :
+    convert the data definitions to objects
+step 5 :
+    design the database schema
+
+-------
+step 6 :
+    design the endpoints though with the data can be manipulated
+    could be of any protocol like http, grpc, thrift, etc...
+step 7 :
+    define the APIs for the endpoints
+step 8 :
+    define engineering requirements
+    i. preventing single point of failure
+    ii. preventing data loss
+    iii. preventing data corruption
+    iv. preventing outages
+    v. preventing data breaches
+    vi. extensibliity - easily add new features
+    vii. scalability - easily scale the system
+    moto is :
+        build a system that can easily extend and scale as and when required
+
+step 9 :
+    Testing
+    i. unit testing
+    ii. integration testing
+    iii. system testing
+    iv. performance testing
+    v. security testing
+    vi. load testing
+    vii. stress testing
+    viii. chaos testing
+    ix. etc...
+
+example :
+
+requirements :
+    i. streaming video
+    ii. processing video
+    iii. broadcasting video
+    iv. failproof
+    v. advertising
+    vi. reactions
+    vii. disclimers / flash messages
+    viii. degradation of video quality
+    ix. multiple devices
+
+TCP : reliable protocol 
+UDP : real time protocol
+
+Network protocols are important to understand the system design
+they are
+    i. TCP
+    ii. UDP
+    iii. HTTP
+    iv. HTTPS
+    v. FTP
+    vi. SMTP
+    vii. POP3
+    viii. IMAP
+    ix. DNS
+    x. DHCP
+    xi. etc...
+
+in this context all the comments , reactions can be stored in a database like 
+    i. mysql or postgresql
+
+the ideal way of storing video is in a file system rather than a database
+    because databases are not designed to store large firewalls
+    eg :
+        if we have a video of 1GB and we store it in a database
+        then the database will store the video in a binary format
+        and the binary format will be stored in a row
+        which is not efficient
+        so the ideal way is to store the video in a file system
+        like 
+            i. s3
+            ii. google cloud storage
+            iii. azure blob storage
+            iv. hadoop file system - hdfs
+            v. etc...
+        using filesystem we get pros like
+            i. we can store large files
+            ii. we can store multiple files
+            iii. we can query the files easily
+            iv. etc...
+
+-------
+to stream the video we can use rtmp - real time multimedia protocol
+    rtmp is a protocol used to stream audio and video over the internet
+    it is used by 
+        i. youtube
+        ii. facebook
+        iii. twitch
+        iv. etc...
+
+-------
+use h.264 codec to compress the video
+    and generate the video in multiple resolutions
+    eg :
+        240p
+        360p
+        480p
+        720p
+        1080p
+        1440p
+        2160p
+        etc...
+    using a video tranformation services like 
+        i. ffmpeg - build using c and c++ , requires a lot of memory and cpu
+        ii. gstreamer - build using c and c++ , requires a lot of memory and cpu
+        iii. etc...
+    use map reduce to process the video tranformation 
+-------
+To stream video to clients use mpeg-dash protocol 
+    mpeg-dash protocol stands for dynamic adaptive streaming over http
+    more suitable for streaming video to clients
+    or
+    hls - http live streaming
+    more suitable for mac and ios devices

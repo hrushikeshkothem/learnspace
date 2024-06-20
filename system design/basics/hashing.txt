@@ -1,0 +1,14 @@
+# Hashing
+
+Hashing is a technique used to store and retrieve data in a fast and efficient manner. 
+
+Raw data -> hash function -> hash value -> store in the cache
+
+Hashing is used in various applications such as databases, caches, and security systems.
+
+primary for databases and caches.
+and sherding in databases.
+and password hashing in security systems.
+etc ...
+
+in this way hashing is import in system design.

@@ -1,0 +1,11 @@
+# Distributed Computing
+
+distributed systems 
+    have multiple components that are located on different machines.
+    all worked together and looks like a single system.
+
+a distributed system 
+    won't have a single point of failure.
+    won't have a downtime.
+    won't have a high latency.
+

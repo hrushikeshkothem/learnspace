@@ -1,0 +1,44 @@
+Design a scalable streaming platform like YouTube or Netflix.
+The system should be able to handle a large number of concurrent users and provide seamless video playback with minimal buffering. 
+Users should be able to upload, view, and share videos. 
+The system should also support features like 
+video recommendations, 
+user subscriptions, 
+and user comments. 
+
+Consider the following requirements:
+
+1. High availability: 
+    The system should be highly available, with minimal downtime and the ability to handle failures gracefully.
+    
+2. Scalability: 
+    The system should be able to handle a large number of concurrent users and support a growing user base.
+
+3. Video storage and encoding: 
+    Design a scalable and efficient video storage and encoding system to handle the storage and processing of large video files.
+
+4. Content delivery: 
+    Implement a content delivery network (CDN) to ensure fast and reliable video streaming to users across different geographical locations.
+
+5. Video transcoding: 
+    Support video transcoding to optimize video quality and adapt to different network conditions and device capabilities.
+
+6. User management: 
+    Implement user authentication and authorization mechanisms to ensure secure access to user accounts and prevent unauthorized access.
+
+7. Recommendation system: 
+    Design a recommendation system that suggests personalized video recommendations based on user preferences, viewing history, and other relevant factors.
+
+8. Social features: 
+    Implement features like user subscriptions, user comments, and video sharing to enhance user engagement and social interactions.
+
+9. Analytics and monitoring: 
+    Design a system to collect and analyze user data, video performance metrics, and system health metrics for monitoring and optimization purposes.
+
+10. Cost optimization:
+    Consider cost optimization strategies, such as efficient resource utilization and cloud service selection, to minimize infrastructure costs.
+
+Remember to discuss trade-offs, potential bottlenecks, and how you would handle potential challenges in your design.
+
+----
+

@@ -1,0 +1,20 @@
+# Quick Note about 12 Factor App Interview QA
+
+learn about where 12 factor app won't needed and where it is needed.
+like 
+- 12 factor app is not needed for small apps.
+- 12 factor app is needed for large scale apps.
+
+- 12 factor app is not needed for the apps that are not going to be scaled.
+- 12 factor app is needed for the apps that are going to be scaled.
+
+- 12 factor app is not needed for the apps that are not going to be maintained.
+- 12 factor app is needed for the apps that are going to be maintained.
+
+- 12 factor app is not needed for the apps that are not going to be deployed frequently.
+- 12 factor app is needed for the apps that are going to be deployed frequently.
+
+- 12 factor app is not needed for the apps that are not going to be monitored.
+- 12 factor app is needed for the apps that are going to be monitored.
+
+etc..

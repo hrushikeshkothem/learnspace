@@ -1,0 +1,40 @@
+# Caching
+
+Caching is a technique used to store copies of resources that are expensive to generate. 
+This can be used to speed up the application by reducing the number of requests made to the server. 
+Caching can be done at different levels, such as the browser, server, or database.
+
+## Browser Caching
+1. In browser caching, the browser stores the resources locally.
+2. The browser will check the cache before making a request to the server.
+3. The browser will store the resources in the cache based on the cache-control header.
+
+## Server Caching
+1. In server caching, the server stores the resources locally.
+2. The server will check the cache before generating the resources.
+3. The server will store the resources in the cache based on the cache-control header.
+
+## Database Caching
+1. In database caching, the database stores the query results locally.
+2. The database will check the cache before executing the query.
+3. The database will store the query results in the cache based on the query.
+
+## Types of Caching
+1. In-memory caching
+2. Distributed caching
+3. Object caching
+4. Page caching
+5. Query caching
+etc ...
+
+## Benefits of Caching
+1. Faster response time
+2. Reduced server load
+3. Improved user experience
+4. Reduced network traffic
+5. Improved application performance
+6. Reduced database load
+7. Reduced latency
+8. Improved scalability
+9. Reduced cost
+etc ...

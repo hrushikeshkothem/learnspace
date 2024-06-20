@@ -1,0 +1,15 @@
+# Three-Tier Architecture on Serverless and Kubernetes
+
+In serverless 
+it is already avaliable , we don't need to worry about the scaling and other stuff.
+
+we use 
+- API Gateway
+- Lambda
+- DynamoDB
+
+In Kubernetes
+we need to worry about the scaling and other stuff.
+we will be deploying the services in the Kubernetes cluster.
+and make sure they are present is different Avaliablity Zones.
+and also we need to make sure that the services are highly available.

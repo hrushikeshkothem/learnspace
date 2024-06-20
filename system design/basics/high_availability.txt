@@ -1,0 +1,42 @@
+# High Availability
+
+High availability is a Characteristics of a system, 
+    which is designed to be available and operational for a high percentage of the time.
+
+Consider a simple three tier architecture system
+
+client -> load balancer -> service -> database
+
+step 1 : is identifying the single point of failure in the system.
+
+in the above case they are 
+1. load balancer
+2. service
+3. database
+
+step 2 : is to make the single point of failure redundant.
+
+in the above case we can have
+1. Most of the times the load balancer is provided by the cloud provider and they are highly available.
+2. We can have multiple instances of the service running in different availability zones. 
+    so that if one availability zone goes down the other availability zone can handle the traffic.
+    and also if it a ec2 instance we can have auto scaling group to scale up and down based on the traffic.
+3. We can have a read replica of the database in different availability zones.
+    so that if one availability zone goes down the other availability zone can handle the traffic.
+    and also if it a rds instance we can have read replicas to scale up and down based on the traffic.
+
+step 3 : is to monitor the system.
+
+we can use cloudwatch to monitor the system.
+we can set up alarms for the system.
+we can set up notifications for the alarms.
+
+step 4 : is to test the system.
+
+in the above case we can have a chaos engineering tool to test the system.
+
+step 5 : is to have a disaster recovery plan.
+ 
+int the above case we can have a backup of the database in different regions.
+
+hence the system is highly available.

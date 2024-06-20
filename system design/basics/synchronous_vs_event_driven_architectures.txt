@@ -1,0 +1,57 @@
+# Synchronous vs Event Driven Architectures
+
+Synchronous Architectures
+
+example : serverless in amazon web services
+
+User -> API Gateway -> Lambda -> DynamoDB
+
+1. In synchronous architectures, the user sends a request to the server.
+2. The server processes the request and sends the response back to the user.    
+3. The server will wait for the response from the user.
+4. The server will have a timeout to wait for the response from the user.
+5. The server will have a single point of failure.
+6. The server will have a downtime while processing the request.
+7. The server will have a high latency while processing the request.
+8. The server will have a high cost while processing the request.
+9. The server will have a limit to process the request.
+10. all the requests are processed in a sequence.
+11. all the components must scale up and down based on the traffic.
+12. all the components must be monitored and managed by the user.
+13. if the backend is down, the user will get a 5xx error.
+14. API Gateway, Lambda, DynamoDB must be scaled together based on the traffic.
+15. if lambda scaling is at peak then the user will get a 429 error.
+
+Event Driven Architectures
+
+example : serverless in amazon web services
+
+User -> API Gateway -> amazon SQS ( Simple Queue Service ) -> Lambda -> DynamoDB
+
+1. In event driven architectures, the user sends a request to the server.
+2. The server processes the request and sends the response back to the user.
+3. The request is stored in the queue. and the server will not wait for the response from the user.
+4. The server will not have a timeout to wait for the response from the user.
+5. The server will not have a single point of failure.
+6. The server will not have a downtime while processing the request.
+7. The server will not have a high latency while processing the request.
+8. The server will not have a high cost while processing the request.
+9. The server will not have a limit to process the request.
+10. all the requests are processed in parallel.
+11. all the components can scale up and down based on the traffic.
+12. all the components can be monitored and managed by the AWS.
+13. if the backend is down, the request will be stored in the queue and will be processed later.
+
+-> Both Synchronous and event driven architectures have 
+    own advantages and disadvantages.
+
+    in most of cases they are used together to build a proper application.
+
+    example : 
+    1. Ordering a food in swiggy , will process in a event driven architecture.
+        because the user will not wait for the response from the server. 
+        the request will be stored in the queue and will be processed later.
+    2. Order status in swiggy will process in a synchronous architecture.
+        because the user will wait for the response from the server.
+        the server will process the request and will send the response back to the user.
+

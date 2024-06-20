@@ -1,0 +1,28 @@
+# Scaling - Vertical vs Horizontal
+
+Let say we have a application 
+1. Which is running on a single server with 4 CPU and 16 GB RAM.
+2. The application is getting more traffic and the server is not able to handle the traffic.
+3. We have two options to scale the application.
+    1. Vertical scaling
+    2. Horizontal scaling
+
+## Vertical scaling
+1. In vertical scaling, we increase the capacity of the server.
+2. We can increase the CPU, RAM, Disk etc ...
+3. We can increase the CPU from 4 to 8, RAM from 16 GB to 32 GB etc ...
+4. The application will be down for some time while increasing the capacity of the server.
+5. The cost of vertical scaling is high.
+6. The server will have a limit to increase the capacity.
+7. The server will have a single point of failure.
+8. The server will have a downtime while increasing the capacity.
+
+## Horizontal scaling
+1. In horizontal scaling, we increase the number of servers.
+2. We can add more servers to the application to handle the traffic.
+3. The application will be up and running while adding more servers.
+4. The cost of horizontal scaling is low.
+5. The application can scale horizontally to any number of servers.
+6. The application will have a high availability.
+7. The application will have a zero downtime while adding more servers.
+8. The application can be scaled up and down based on the traffic.

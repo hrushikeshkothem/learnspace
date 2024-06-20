@@ -1,0 +1,56 @@
+# Store and Retrieve Images
+
+Let's assume the requirement is 
+user uploads an image with highest resolution and the image should be viewed across  
+various devices with different resolutions.
+
+and it don't make sense to upload the image with highest resolution and view it in the mobile with small resolution.
+
+so the system should be able to store the image in different resolutions and the image should be viewed based on the device resolution.
+and store their locations in the database.
+
+make sure that system is highly available and scalable.
+and also make sure that system is secured.
+
+we have two approaches to implement this system.
+
+1. using Virtual Machines
+and 
+2. using Serverless
+and 
+3. using Kubernetes
+
+let's forget Kubernetes for now.
+
+1. using Virtual Machines
+
+we can use the Virtual Machines to store the images in different resolutions.
+
+1. user uploads an image with highest resolution.
+2. route 53 routes the request to the Application load balancer.
+3. the application load balancer routes the request to the auto scaling group. of EC2 instances.
+   the does the inital meta data extraction and stores the image in the S3 bucket. and it is also
+   used to check if the image is explicit or violates the policies.
+4. once the image is stored in the S3 bucket. this application server sends a request to the 
+   another auto scaling group of EC2 instances. which does the image processing and stores the image in different resolutions.
+5. once the image is stored in different resolutions and uploaded to the S3 bucketes.
+    the location of the images are stored in the database.
+6. if the image processing is a long running task. we can use the SQS to store the messages and the 
+    EC2 instances can poll the messages from the SQS and process the images.
+7. once the image is stored in the S3 bucket. the image is served from the S3 bucket.
+
+2. using Serverless
+
+we can use the serverless to store the images in different resolutions.
+
+1. user uploads an image with highest resolution.
+2. route 53 routes the request to the API Gateway.
+3. the API Gateway triggers the Lambda function. which does the inital meta data extraction and stores the image in the S3 bucket. and it is also
+   used to check if the image is explicit or violates the policies.
+4. once the image is stored in the S3 bucket. this Lambda function sends a request to the 
+   another Lambda function. which does the image processing and stores the image in different resolutions.
+5. once the image is stored in different resolutions and uploaded to the S3 bucketes.
+    the location of the images are stored in the database.
+6. if the image processing is a long running task. we can use the SQS to store the messages and the
+    Lambda functions can poll the messages from the SQS and process the images.
+7. once the image is stored in the S3 bucket. the image is served from the S3 bucket.

@@ -1,0 +1,89 @@
+# Redis Memcached Caching Strategies
+
+-> Redis and memcached are popular in-memory caching systems used to store data in memory.
+    both of them are open source software.
+    both of them are used to store key-value pairs.
+    both of them are used to cache the data.
+    both of them are used to speed up the application.
+    both of them are used to reduce the number of requests made to the server.
+
+Redis cache : 
+
+1. Redis is an open source in-memory data structure store.
+2. Redis is used as a database, cache, and message broker.
+3. Redis provide with a complex data structures.
+4. Redis is a high performance database.
+5. Redis don't support multi-threading.
+6. Redis is a single-threaded database.
+7. Redis helps with sorting, ranking and probabilistic data structures.
+
+Memcached cache :
+
+1. Memcached is an open source high-performance distributed memory caching system.
+2. Memcached is used to speed up dynamic web applications.
+3. Memcached is a simple key-value store.
+4. Memcached is more simpler than Redis.
+5. Memcached is a high performance database.
+6. Memcached is a multi-threaded database.
+7. Memcached is a distributed database.
+8. Memcached donot support complex data structures and data types 
+9. Memcached can't provide sorting, ranking and probabilistic data structures.
+
+-------------------------------------------------------------------------------------------------------
+Caching Strategies :
+    There are different caching strategies that can be used to cache the data.
+    1. Lazy loading
+    2. Write-through
+    3. Write-behind
+    4. Cache-aside
+    5. Read-through
+    6. Read-through with write-behind
+    7. Write-through with read-through
+    etc...
+
+Lazy loading :
+    in lazy loading, the data will be loaded into the cache only when it is requested.
+
+
+    user -> api Gateway -> lamda/ec2 --- checks if the data is in cache ----> Redis/Memcached
+
+    if the data is in cache then the data will be returned from the cache.
+        that is called a cache hit.
+    if the data is not in cache then the data will be fetched from the database.
+        that is called a cache miss. 
+
+    if there is a cache hit, the service sends that data to the user.
+
+    if there is a cache miss, the service fetches the data from the database and stores it in the cache.
+        and then sends that data to the user.
+        that is called a cache write or cache update.
+
+   cons :
+    1. if the data is not in cache then the data will be fetched from the database.
+        this will increase the latency.
+    2. data is stale in the cache.
+    3. the cache will be filled with stale data so Time to live (TTL) should be set.
+
+    pros :
+    1. the cache will be filled with the most frequently used data.
+    2. the cache will be filled with the most recently used data.
+    3. faster response time.
+
+Write-through :
+
+    in write-through, the data will be written to the cache and the database at the same time.
+
+    user -> api Gateway -> lamda/ec2 --- writes the data to the cache and database ----> Redis/Memcached
+
+    if the data is in cache then the data will be updated in the cache.
+    if the data is not in cache then the data will be fetched from the database and stored in the cache.
+
+    cons :
+    1. the data will be written to the cache and database at the same time.
+        this will increase the latency.
+    2. the cache will be filled with stale data so Time to live (TTL) should be set.
+
+    pros :
+    1. the cache will be filled with the most frequently used data.
+    2. the cache will be filled with the most recently used data.
+    3. faster response time.

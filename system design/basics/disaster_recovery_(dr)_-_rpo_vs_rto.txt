@@ -1,0 +1,20 @@
+# Disaster Recovery (DR) - RPO vs RTO
+
+Disaster Recovery (DR) is a set of policies and procedures that focus on protecting an organization from the effects of a disaster.
+ It is a part of a business continuity plan and is essential for an organization to recover from a disaster.
+
+multiple approches to DR:
+1. RPO (Recovery Point Objective) - The acceptable amount of data loss measured in time.
+2. RTO (Recovery Time Objective) - The acceptable amount of time to recover from a disaster.
+
+RPO and RTO are two key metrics that are used to measure the efficiency of a disaster recovery plan.
+
+RPO is the maximum amount of data that an organization can afford to lose in the event of a disaster.
+RTO is the maximum amount of time that an organization can afford to be without its data in the event of a disaster.
+
+example 
+RPO = 1 hour
+A data backup is taken every hour. If a disaster occurs, the organization can recover the data up to the last backup.
+
+RTO = 4 hours
+The organization can recover from a disaster within 4 hours.

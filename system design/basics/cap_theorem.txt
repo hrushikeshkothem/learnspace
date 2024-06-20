@@ -1,0 +1,20 @@
+# CAP Theorem
+
+C - Consistency
+A - Availability
+P - Partition Tolerance
+
+Whenever a network partition occurs, you have to choose between consistency and availability.
+
+If you choose consistency, you have to wait until the partition is resolved to read or write data. 
+If you choose availability, you can read and write data, but you might read stale data or write data that will be lost.
+
+Partition tolerance is a must-have in distributed systems, so you have to choose between consistency and availability.
+
+This is known as the CAP theorem, which states that in a distributed system, you can only have two of the following three guarantees: Consistency, Availability, and Partition Tolerance.
+
+For example, in a distributed system, you can have consistency and partition tolerance, but you might not have availability during a network partition.
+
+Or you can have availability and partition tolerance, but you might not have consistency.
+
+Or you can have consistency and availability, but you might not have partition tolerance.

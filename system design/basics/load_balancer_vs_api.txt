@@ -1,0 +1,44 @@
+# Load Balancer vs API
+
+Application Load balancer
+
+    1. OSI layer 7
+    2. Distributes traffic
+    3. Infrastructer management and scaling etc ..
+
+API Gateway
+
+    1. Fully managed and Serverless
+    2. Scales up and down 
+    3. Infrastructe managed by AWS
+
+Difference 
+
+1. API Gateway offers Rate limiting and brusting etc ...
+
+2. Application Load balancer wont offer rate limiting and brusting etc ...
+
+3. Both API Gateway and Application load balancer can use WAF (Web Application Firewall) to protect from DDOS attacks etc ...
+
+4. API Gateway can't provide a static IP address, but Application Load balancer can provide a static IP address.
+
+5. API Gateway accepts only HTTPS requests, but Application Load balancer can accept both HTTP and HTTPS requests.
+
+6. API Gateway can do request validation, response validation, and transformation, but Application Load balancer can't do these things.
+
+7. API Gateway can perform better in spike traffic, but Application Load balancer can't perform better in spike traffic.
+
+8. API Gateway can provide caching, but Application Load balancer can't provide caching.
+
+9. API Gateway can provide monitoring and logging, but Application Load balancer can't provide monitoring and logging.
+
+10. API Gateway can provide throttling, but Application Load balancer can't provide throttling.
+
+11. API Gateway can import and export API definitions from platforms like Swagger, but Application Load balancer can't import and export API definitions from platforms like Swagger.
+
+12. API Gateway timeout is 30 seconds, but Application Load balancer timeout is 4000 seconds.
+
+13. API Gateway can't provide a health check, but Application Load balancer can provide a health check.
+
+14. API Gateway is pay per use service, but Application Load balancer is pay per hour service.
+

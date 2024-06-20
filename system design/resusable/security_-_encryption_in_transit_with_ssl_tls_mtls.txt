@@ -1,0 +1,24 @@
+# Security - Encryption In Transit with SSL TLS MTLS
+
+HTTPS is generally called as encryption in transit.
+
+https works with ssl and tls.
+ssl stands for secure socket layer.
+tls stands for transport layer security.
+
+ssl is the old version and tls is the new version.
+
+working of https: 
+1. client sends a request to the server.
+2. server sends a certificate to the client.
+3. client validates the certificate. using the public key of the server. like certificate Authority (CA).
+4. client generates a symmetric key and encrypts the data with the symmetric key.
+5. client sends the encrypted data to the server.
+6. server decrypts the data with the symmetric key.
+7. server sends the response to the client.
+8. client decrypts the data with the symmetric key.
+9. client sends the response to the server.
+
+MTLS stands for mutual transport layer security.
+
+it is mostly used for b2b services where both the client and server should have a certificate.

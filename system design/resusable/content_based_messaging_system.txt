@@ -1,0 +1,38 @@
+# Content Based Messaging System
+
+Content Based Messaging system 
+is a messaging system that allows the user to send messages to other users based on the content of the message.
+
+consider a senario like :
+    - A insurence company wants to send a message to all the users who have a car insurance policy.
+    - Same company wants to send a invoice to all the users who have a health insurance policy.
+    - Same company wants to send a promotional email to all the users who have a life insurance policy.
+
+In the above senario, the company wants to send messages to the users based on the content of the message.
+hence it is called as Content Based Messaging System.
+
+to implement this system ,
+
+implemention 1:
+
+consider a serivce A that does all the pre-processing and other stuff
+
+now the service A sends a request with a payload to a Simple Queue Service (SQS) with the content
+and a lambda function is triggered by the SQS and the lambda function sends the message to the user based on the content of the message.
+
+but the above approach is not scalable and not efficient.
+because the lambda function is triggered for every message and it is not efficient.
+it may lead to a lot of cost. and also the lambda function may not be able to handle the load.
+
+implemention 2:
+
+consider a service A that does all the pre-processing and other stuff
+
+now the serivce A sends a request with a payload to a Simple Notification Service (SNS) which is in pub-sub model.
+and the SNS sends the messages to the users based on the content of the message.
+
+and it can be scaled easily and it is efficient.
+
+for futhur scaling , we pass the message to a Queue and the Queue sends to the lambda function of that user service.
+
+this is how the Content Based Messaging System works.

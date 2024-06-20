@@ -1,0 +1,53 @@
+# Data Analytics & Big Data Design Patterns
+
+Steps of Data Analytics :
+
+1. Data Collection
+2. Data Storage
+3. Data Processing
+4. Data Analysis
+5. Data Visualization
+6. Data Interpretation
+
+Data Collection :
+In aws we can use the following services to collect the data :
+1. Kinesis Data Streams
+2. Kinesis Data Firehose
+3. Kinesis Data Analytics
+4. IoT Core
+etc...
+
+Data Storage :
+In aws we can use the following services to store the data :
+1. S3
+2. RDS
+3. DynamoDB
+etc...
+
+Data Processing :
+In aws we can use the following services to process the data :
+1. EMR
+2. Glue
+3. Lambda
+etc...
+
+Data Analysis :
+In aws we can use the following services to analyze the data :
+1. Athena
+2. QuickSight
+3. Redshift
+etc...
+
+Data Visualization :
+In aws we can use the following services to visualize the data :
+1. QuickSight
+2. Tableau
+3. PowerBI
+etc...
+
+Data Interpretation :
+In aws we can use the following services to interpret the data :
+1. QuickSight
+2. Tableau
+3. PowerBI
+etc...

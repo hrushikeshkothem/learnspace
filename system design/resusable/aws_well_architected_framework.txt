@@ -1,0 +1,37 @@
+# AWS Well Architected Framework
+
+Amazon web serivces provide a framework for building secure, high-performing, resilient, and efficient infrastructure for your applications. 
+The AWS Well-Architected Framework provides a consistent approach for customers and partners to evaluate architectures, and implement designs that will scale over time.
+
+the main pillars of the AWS Well-Architected Framework are:
+1. Operational Excellence
+2. Security
+3. Reliability
+4. Performance Efficiency
+5. Cost Optimization
+
+1. Operational Excellence
+    - Operational Excellence is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
+    - Key topics include managing and automating changes, responding to events, and defining standards to successfully manage daily operations.
+    - AWS services that can help you achieve operational excellence include AWS CloudFormation, AWS OpsWorks, AWS Config, AWS CloudTrail, and AWS Trusted Advisor.
+
+2. Security
+    - Security is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+    - Key topics include data protection, privilege management, detective controls, and infrastructure protection.
+    - AWS services that can help you achieve security include AWS Identity and Access Management (IAM), AWS Key Management Service (KMS), AWS CloudHSM, and AWS Shield.
+
+3. Reliability
+    - Reliability is the ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate disruptions such as misconfigurations or transient network issues.
+    - Key topics include foundations for resilient architectures, recovery planning, and scaling.
+    - AWS services that can help you achieve reliability include Amazon Route 53, Amazon CloudFront, Amazon S3, Amazon RDS, and Amazon DynamoDB.
+
+4. Performance Efficiency
+    - Performance Efficiency is the ability to use computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes and technologies evolve.
+    - Key topics include selecting the right resource types and sizes based on workload requirements, monitoring performance, and making informed decisions to maintain efficiency as business needs evolve.
+    - AWS services that can help you achieve performance efficiency include Amazon EC2, Amazon EBS, Amazon RDS, Amazon DynamoDB, and Amazon ElastiCache.
+
+5. Cost Optimization
+    - Cost Optimization is the ability to avoid or eliminate unneeded cost or suboptimal resources.
+    - Key topics include understanding and controlling where money is being spent, selecting the most appropriate and right number of resource types, analyzing spend over time, and scaling to meet business needs without overspending.
+    - AWS services that can help you achieve cost optimization include AWS Cost Explorer, AWS Budgets, AWS Trusted Advisor, and Amazon EC2 Spot Instances.
+

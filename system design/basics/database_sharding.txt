@@ -1,0 +1,16 @@
+# Database Sharding
+
+Database sharding is a method of splitting and storing a single logical dataset in multiple databases. 
+Each shard is a database, 
+and is referred to as a shard. 
+Each shard is held on a separate database server instance to spread the load.
+
+Sharding is necessary when the data set becomes too large to be stored in a single database.
+
+Monolithic databases are not able to handle the load of large-scale applications.
+
+Monolithic DB  -> Sharding
+
+Sharding is a database architecture pattern related to horizontal partitioning 
+— the practice of separating one table’s rows into multiple different tables, 
+known as partitions.

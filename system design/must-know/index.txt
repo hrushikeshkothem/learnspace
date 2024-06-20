@@ -1,0 +1,42 @@
+1. Microservices 
+  i. API Gateway vs Application Load Balancer
+    a. API Gateway
+      i. API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
+      ii. API Gateway can handle all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, authorization and access control, monitoring, and API version management.
+      iii. API Gateway has no minimum fees or startup costs. You pay only for the API calls you receive and the amount of data transferred out.
+      iv. API Gateway is a good choice for creating APIs that are exposed to external clients, such as mobile applications or third-party developers.
+    b. Application Load Balancer
+      i. Application Load Balancer is a Layer 7 load balancer that operates at the request level, routing traffic to targets based on the content of the request.
+      ii. Application Load Balancer can handle advanced routing and load balancing for HTTP and HTTPS traffic and provides features such as host-based routing, path-based routing, and support for containerized applications.
+      iii. Application Load Balancer is a good choice for distributing incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses.
+      iv. Application Load Balancer is designed to handle high volumes of traffic and can scale to handle millions of requests per second.
+      v. Application Load Balancer is a good choice for internal applications or microservices that need to be load balanced within an Amazon VPC.
+
+    ii. Sync and event driven patterns 
+        a. Sync
+            i. Synchronous communication is when the client sends a request to the server and waits for a response before continuing.
+            ii. Synchronous communication is easy to implement and debug, but it can be slow and inefficient, especially for long-running or resource-intensive tasks.
+            iii. Synchronous communication can lead to bottlenecks and scalability issues, as the server must handle each request in real-time.
+        b. Async
+            i. Asynchronous communication is when the client sends a request to the server and continues without waiting for a response.
+            ii. Asynchronous communication is more efficient and scalable than synchronous communication, as the server can process requests in parallel and handle long-running tasks without blocking other requests.
+            iii. Asynchronous communication can be more complex to implement and debug, as it requires handling callbacks, events, or messages to manage the flow of data between the client and server.
+            iv. Asynchronous communication is a good choice for tasks that are resource-intensive, long-running, or non-blocking, such as file uploads, batch processing, or event-driven workflows.
+
+2. Database selection
+    1. SQL vs NoSQL
+
+3. Caching 
+    i. Caching of Database and DNS
+
+4. Security
+    i. Encryption at Rest Client Server Side Encryption
+    ii. Authentication (Log In) & Authorization
+    iii. Encryption In Transit with SSL TLS MTLS
+
+5. Make it Highly Avaliable and Scalable
+    i. Load Balancer
+    ii. Auto Scaling
+    iii. Multi-AZ Deployment
+    iv. CDN
+

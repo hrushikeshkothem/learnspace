@@ -1,0 +1,22 @@
+# Consistent Hashing
+
+Consistent hashing is a technique used in distributed systems to distribute data across multiple servers. 
+It is used to solve the problem of distributing data across a cluster of servers while minimizing the number of relocations when the cluster size changes. 
+It is also used in caching, load balancing, and P2P networks.
+
+Intially it considers all the servers in the cluster as points on a circle.
+
+When a new data item is added to the system, a hash function is used to map the data item to a point on the circle.
+
+and the server next to the point when travelled in clockwise direction is selected as the server to store the data item.
+
+When a server is removed from the cluster, the data items that were stored on that server are re-mapped to the next server in the clockwise direction.
+
+This way, consistent hashing minimizes the number of relocations when the cluster size changes, making it an efficient way to distribute data across multiple servers.
+
+cons : 
+    this could cause uneven distribution of data across servers.
+    To solve this, virtual nodes can be used, where each physical server is represented by multiple virtual nodes on the circle. This helps distribute the data more evenly across the servers.
+
+examples :
+    Cassandra, Riak, and Memcached are some of the systems that use consistent hashing to distribute data across multiple servers.

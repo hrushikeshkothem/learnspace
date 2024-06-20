@@ -1,0 +1,89 @@
+# VM, Serverless, Container Scaling
+
+Scaling VM (Vertical and Horizontal)
+-> Vertical 
+
+    inital State
+    traffic -> Application Load Balancer -> VM (4 CPU, 16 GB RAM)
+
+    ( now more traffic )
+    Spin up a new VM (8 CPU, 32 GB RAM) -> Application Load Balancer -> VM (4 CPU, 16 GB RAM) -> VM (8 CPU, 32 GB RAM)
+    divert the traffic to the new VM (8 CPU, 32 GB RAM) -> Application Load Balancer -> VM (8 CPU, 32 GB RAM) -> VM (8 CPU, 32 GB RAM)
+
+    transition State
+    traffic -> Application Load Balancer       VM (4 CPU, 16 GB RAM)
+                    |
+                    |------------------------> VM (8 CPU, 32 GB RAM)
+
+    Once the traffic is diverted to the new VM (8 CPU, 32 GB RAM), we can stop the old VM (4 CPU, 16 GB RAM)
+
+    final State
+    traffic -> Application Load Balancer -> VM (8 CPU, 32 GB RAM)
+
+-> Horizontal
+
+    inital State
+    traffic -> Application Load Balancer -> VM (4 CPU, 16 GB RAM)
+
+    ( now more traffic )
+    Before the VM from Application Load Balancer we have a auto scaling group 
+        which spins up a new VM (4 CPU, 16GB RAM)
+
+    transition State
+    identify the traffic and spin up a new VM (4 CPU, 16 GB RAM) -> Application Load Balancer -> VM (4 CPU, 16 GB RAM) -> VM (4 CPU, 16 GB RAM)
+                                            |----------------------------------------------------|
+    traffic -> Application Load Balancer -> | VM (4 CPU, 16 GB RAM)                              |
+                                            |                                                    |
+                                            |----------------------------------------------------|
+
+    final State
+                                            |----------------------------------------------------|
+    traffic -> Application Load Balancer -> | VM (4 CPU, 16 GB RAM)                              |
+                                            | VM (4 CPU, 16 GB RAM)                              |
+                                            |----------------------------------------------------|
+
+Scaling Serverless
+
+Lamda can scale up and down based only horizontally not vertically
+    inital State
+    traffic -> Application Load Balancer -> Lamda
+
+    ( now more traffic )
+    Lamda will spin up more instances to handle the traffic
+
+    transition State
+    traffic -> Application Load Balancer -> [ Lamda ]   Lamda  Lamda
+
+    final State
+    traffic -> Application Load Balancer -> [ Lamda , Lamda , Lamda ]
+
+Scaling Container
+
+Kubernetes can scale up and down based on both horizontally and vertically
+    inital State
+    traffic -> Application Load Balancer -> Kubernetes -> Container
+
+    ( now more traffic )
+    Kubernetes will spin up more containers to handle the traffic
+
+    transition State
+    traffic -> Application Load Balancer -> Kubernetes -> [ Container ]   Container  Container
+
+    final State
+    traffic -> Application Load Balancer -> Kubernetes -> [ Container , Container , Container ]
+
+in Kubernetes we have
+    HPA - Horizontal Pod Autoscaler
+    and if even more traffic 
+    we have
+    VPA - Vertical Pod Autoscaler
+
+    and cluster autoscaler
+    which will spin up more nodes in the cluster if the traffic is more
+    and spin down the nodes if the traffic is less
+
+    but if we are using AWS EKS
+    we have to use the AWS autoscaler
+    which will spin up more nodes in the cluster if the traffic is more
+    and spin down the nodes if the traffic is less
+    

@@ -1,0 +1,13 @@
+# Security - Authentication (Log In) & Authorization
+
+Login and Authorization is generally done using IAM (Identity and Access Management) in AWS.
+or else we can use 3rd party services like Auth0, Okta, etc.
+
+it is basically a Authentication service in which client authenticate and sends us a token
+and we validate that token and provide the access to the client.
+
+In AWS we can use the following services to authenticate and authorize the users:
+1. Cognito
+2. IAM
+3. SSO
+

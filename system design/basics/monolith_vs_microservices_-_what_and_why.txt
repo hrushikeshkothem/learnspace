@@ -1,0 +1,69 @@
+# Monolith vs Microservices - What and Why
+
+Monolith is a single unit of code 
+    that contains all user interface, business logic, and data access code. etc ... 
+    all in one place.
+
+    pros : 
+        1. Easy to develop
+        2. Simple to develop, test, and deploy
+        3. No over engineering
+        4. Single code base
+        5. Easy to refactor
+        6. Small team can manage
+        7. For small scale applications best choice
+    cons :
+        1. Hard to scale
+        2. Hard to maintain
+        3. Long release cycles
+        4. Hard to adopt new technologies
+        5. Modularity is hard
+        6. Slow development
+
+    -> Monolith is good for small scale applications.
+    -> APIs can be used with Monolith
+       -> Api Gateway / Load Balancer -> " Monolith " -> Database
+    Scaling Monolith :
+    -> Vertical Scaling : Increase the resources of the server
+    -> Horizontal Scaling : Increase the number of servers
+
+
+Microservices is a collection of small services
+    that are independently deployable and scalable.
+
+    pros :
+        1. Easy to scale
+        2. Easy to maintain
+        3. Short release cycles
+        4. Easy to adopt new technologies
+        5. Modularity is easy
+        6. Fast development
+        7. Independent of each other
+        8. Polyglot architecture
+    
+    cons :
+        1. Complex to develop
+        2. Complex to test
+        3. Complex to deploy
+        4. Over engineering
+        5. Distributed system
+        6. Large team required
+        7. For large scale applications best choice
+        
+    -> Microservices is good for large scale applications.
+    -> APIs can be used with Microservices
+       -> Api Gateway / Load Balancer ->  [ "Backend 1" , "Backend 2", "Backend 3" ] -> Database
+
+    Scaling Microservices :
+        -> Horizontal Scaling : Increase the number of services
+        -> we can have different backend and independent of each other
+            can maintain and scale independently.
+            can be of different technologies.
+            that is called "polyglot" architecture.
+
+    Characteristics of Microservices :
+        1. Scaling
+        2. Governance
+        3. Deployment
+        4. Testing
+        5. Functionality
